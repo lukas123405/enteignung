@@ -1,6 +1,7 @@
 name: enteignen
 main: de.projekt_black.enteignung.main
 author: DiviDus, Inted
+version: 0.1
 commands:
      enteignen:
           description: enteignet eine Region
