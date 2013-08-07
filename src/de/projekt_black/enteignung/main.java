@@ -58,6 +58,7 @@ public class main extends JavaPlugin{
 		int miny = region.getMinimumPoint().getBlockY();
 		
 		region.getOwners().removaAll();
+		region.getMembers().removaAll();
 		for (int x = minx;x<=maxx;x++){
 			for (int y = miny;y<=maxy;y++){
 				for (int z = minz;z<=maxz;z++){
@@ -67,7 +68,7 @@ public class main extends JavaPlugin{
 					Material materials[] = {Material.DIAMOND_BLOCK,Material.DIAMOND_ORE,Material.EMERALD_BLOCK,Material.EMERALD_ORE,Material.CHEST,Material.TRAPPED_CHEST,Material.FURNACE,Material.DISPENSER,Material.HOPPER,Material.WORKBENCH};
 						for (Material mat: materials){					
 							if (m.equals(mat)){
-								b.setType(Material.AIR);
+								removeBlock(b);
 							}
 						}
 					}
@@ -77,5 +78,7 @@ public class main extends JavaPlugin{
 	
 		return false;
 	}
-		
+private void removeBlock(Block b){
+	
+}
 }
